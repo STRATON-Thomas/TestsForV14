@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<K5project version="1.1">
+   <programs>
+      <pou name="tSFC" kind="program" period="1" phase="0" lge="SFC">
+         <vargroup name="tSFC" kind="LOCAL">
+         </vargroup>
+<defines name="tSFC"></defines>
+         <sourceSFC sx="1" sy="7">
+            <SFCstep kind="init" dx="0" dy="0" ref="1" name="GS1" next="GT1">
+            </SFCstep>
+            <SFCtrans dx="0" dy="1" ref="1" name="GT1" next="GS2">
+            </SFCtrans>
+            <SFCstep kind="default" dx="0" dy="2" ref="2" name="GS2" next="GT2">
+            </SFCstep>
+            <SFCtrans dx="0" dy="3" ref="2" name="GT2" next="GS3">
+            </SFCtrans>
+            <SFCstep kind="default" dx="0" dy="4" ref="3" name="GS3" next="GT3">
+            </SFCstep>
+            <SFCtrans dx="0" dy="5" ref="3" name="GT3" next="GS1">
+            </SFCtrans>
+            <SFCjump dx="0" dy="6" ref="1" target="GS1"/>
+         </sourceSFC>
+      </pou>
+   </programs>
+</K5project>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<K5project version="1.1">
+   <programs>
+      <pou name="tLD" kind="program" period="1" phase="0" lge="LD">
+         <vargroup name="tLD" kind="LOCAL">
+         </vargroup>
+<defines name="tLD"></defines>
+         <sourceLD>
+            <LDrung dx="0" dy="0" sx="3" sy="1" label="">
+               <LDcontact kind="D" symbol="" dx="1" dy="0"/>
+               <LDcoil kind="D" symbol="" dx="2" dy="0"/>
+            </LDrung>
+         </sourceLD>
+      </pou>
+   </programs>
+</K5project>
