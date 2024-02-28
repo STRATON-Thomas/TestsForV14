@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<K5project version="1.1">
+   <programs>
+      <pou name="XCBR1_Simu" kind="program" period="1" phase="0" lge="ST">
+         <vargroup name="XCBR1_Simu" kind="LOCAL">
+            <var name="Inst_TON" type="TON"/>
+            <var name="InProgress" type="BOOL"/>
+         </vargroup>
+<defines name="XCBR1_Simu"></defines>
+         <sourceSTIL>
+Inst_TON( InProgress, T#3s ); // dbPos simulation takes T#3s to be open/close
+XCBR1_Pos_InProgress := ANY_TO_DINT(Inst_TON.ET);
+
+IF STRATONLDevice1_XCBR1_Pos_Control = 200 AND
+ ANY_TO_UDINT(STRATONLDevice1_XCBR1_Pos_Oper_ctlVal) &lt;&gt; STRATONLDevice1_XCBR1_Pos_stVal THEN
+     InProgress := TRUE;
+ELSE
+    InProgress := FALSE;
+END_IF;
+
+         </sourceSTIL>
+      </pou>
+   </programs>
+</K5project>

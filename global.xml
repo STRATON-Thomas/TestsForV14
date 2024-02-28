@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<K5project version="1.1">
+   <variables>
+      <vargroup name="(Global)" kind="GLOBAL">
+         <var name="STRATONLDevice1_XCBR1_Beh_stVal" type="IEC61850_Beh">
+         <varinfo type="tag" data="Circuit Breaker"/>
+         <varinfo type="embed" data="&lt;syb&gt;(LogicalDevice=&apos;STRATONLDevice1&apos; LogicalNode=&apos;XCBR1&apos; DataObject=&apos;Beh&apos; DataAttribute=&apos;stVal&apos; ControlObject=FALSE GOOSEreception=FALSE FunctionalConstraint=&apos;ST&apos; GOOSECB=&apos;&apos; GOOSECBLD=&apos;&apos;)"/>
+         <varinfo type="profile" data="IEC61850S2"/>
+         </var>
+         <var name="STRATONLDevice1_XCBR1_Loc_stVal" type="BOOL">
+         <varinfo type="embed" data="&lt;syb&gt;(LogicalDevice=&apos;STRATONLDevice1&apos; LogicalNode=&apos;XCBR1&apos; DataObject=&apos;Loc&apos; DataAttribute=&apos;stVal&apos; ControlObject=FALSE GOOSEreception=FALSE FunctionalConstraint=&apos;ST&apos; GOOSECB=&apos;&apos; GOOSECBLD=&apos;&apos;)"/>
+         <varinfo type="profile" data="IEC61850S2"/>
+         </var>
+         <var name="STRATONLDevice1_XCBR1_Pos_Oper_ctlVal" type="BOOL">
+         <varinfo type="embed" data="&lt;syb&gt;(LogicalDevice=&apos;STRATONLDevice1&apos; LogicalNode=&apos;XCBR1&apos; DataObject=&apos;Pos&apos; DataAttribute=&apos;Oper.ctlVal&apos; ControlObject=FALSE GOOSEreception=FALSE FunctionalConstraint=&apos;CO&apos; GOOSECB=&apos;&apos; GOOSECBLD=&apos;&apos;)"/>
+         <varinfo type="profile" data="IEC61850S2"/>
+         </var>
+         <var name="STRATONLDevice1_XCBR1_Pos_stVal" type="UDINT">
+         <varinfo type="embed" data="&lt;syb&gt;(LogicalDevice=&apos;STRATONLDevice1&apos; LogicalNode=&apos;XCBR1&apos; DataObject=&apos;Pos&apos; DataAttribute=&apos;stVal&apos; ControlObject=FALSE GOOSEreception=FALSE FunctionalConstraint=&apos;ST&apos; GOOSECB=&apos;&apos; GOOSECBLD=&apos;&apos;)"/>
+         <varinfo type="profile" data="IEC61850S2"/>
+         </var>
+         <var name="STRATONLDevice1_XCBR1_Pos_ctlModel" type="SINT">
+         <varinfo type="embed" data="&lt;syb&gt;(LogicalDevice=&apos;STRATONLDevice1&apos; LogicalNode=&apos;XCBR1&apos; DataObject=&apos;Pos&apos; DataAttribute=&apos;ctlModel&apos; ControlObject=FALSE GOOSEreception=FALSE FunctionalConstraint=&apos;CF&apos; GOOSECB=&apos;&apos; GOOSECBLD=&apos;&apos;)"/>
+         <varinfo type="profile" data="IEC61850S2"/>
+         </var>
+         <var name="STRATONLDevice1_XCBR1_BlkOpn_stVal" type="BOOL">
+         <varinfo type="embed" data="&lt;syb&gt;(LogicalDevice=&apos;STRATONLDevice1&apos; LogicalNode=&apos;XCBR1&apos; DataObject=&apos;BlkOpn&apos; DataAttribute=&apos;stVal&apos; ControlObject=FALSE GOOSEreception=FALSE FunctionalConstraint=&apos;ST&apos; GOOSECB=&apos;&apos; GOOSECBLD=&apos;&apos;)"/>
+         <varinfo type="profile" data="IEC61850S2"/>
+         </var>
+         <var name="STRATONLDevice1_XCBR1_BlkCls_stVal" type="BOOL">
+         <varinfo type="embed" data="&lt;syb&gt;(LogicalDevice=&apos;STRATONLDevice1&apos; LogicalNode=&apos;XCBR1&apos; DataObject=&apos;BlkCls&apos; DataAttribute=&apos;stVal&apos; ControlObject=FALSE GOOSEreception=FALSE FunctionalConstraint=&apos;ST&apos; GOOSECB=&apos;&apos; GOOSECBLD=&apos;&apos;)"/>
+         <varinfo type="profile" data="IEC61850S2"/>
+         </var>
+         <var name="STRATONLDevice1_LLN0_Beh_stVal" type="IEC61850_Beh">
+         <varinfo type="embed" data="&lt;syb&gt;(LogicalDevice=&apos;STRATONLDevice1&apos; LogicalNode=&apos;LLN0&apos; DataObject=&apos;Beh&apos; DataAttribute=&apos;stVal&apos; ControlObject=FALSE GOOSEreception=FALSE FunctionalConstraint=&apos;ST&apos; GOOSECB=&apos;&apos; GOOSECBLD=&apos;&apos;)"/>
+         <varinfo type="profile" data="IEC61850S2"/>
+         </var>
+         <var name="STRATONLDevice1_LLN0_Mod_stVal" type="SINT">
+         <varinfo type="embed" data="&lt;syb&gt;(LogicalDevice=&apos;STRATONLDevice1&apos; LogicalNode=&apos;LLN0&apos; DataObject=&apos;Mod&apos; DataAttribute=&apos;stVal&apos; ControlObject=FALSE GOOSEreception=FALSE FunctionalConstraint=&apos;ST&apos; GOOSECB=&apos;&apos; GOOSECBLD=&apos;&apos;)"/>
+         <varinfo type="profile" data="IEC61850S2"/>
+         </var>
+         <var name="STRATONLDevice1_XCBR1_Pos_Control" type="INT">
+         <varinfo type="embed" data="&lt;syb&gt;(LogicalDevice=&apos;STRATONLDevice1&apos; LogicalNode=&apos;XCBR1&apos; DataObject=&apos;Pos&apos; DataAttribute=&apos;&apos; ControlObject=TRUE GOOSEreception=FALSE FunctionalConstraint=&apos;&apos; GOOSECB=&apos;&apos;)"/>
+         <varinfo type="profile" data="IEC61850S2"/>
+         </var>
+         <var name="STRATONLDevice1_XCBR1_Pos_SBOw_ctlVal" type="BOOL">
+         <varinfo type="embed" data="&lt;syb&gt;(LogicalDevice=&apos;STRATONLDevice1&apos; LogicalNode=&apos;XCBR1&apos; DataObject=&apos;Pos&apos; DataAttribute=&apos;SBOw.ctlVal&apos; ControlObject=FALSE GOOSEreception=FALSE FunctionalConstraint=&apos;CO&apos; GOOSECB=&apos;&apos; GOOSECBLD=&apos;&apos;)"/>
+         <varinfo type="profile" data="IEC61850S2"/>
+         </var>
+         <var name="STRATONLDevice1_XCBR1_BlkOpn_Control" type="UINT">
+         <varinfo type="embed" data="&lt;syb&gt;(LogicalDevice=&apos;STRATONLDevice1&apos; LogicalNode=&apos;XCBR1&apos; DataObject=&apos;BlkOpn&apos; DataAttribute=&apos;&apos; ControlObject=TRUE GOOSEreception=FALSE FunctionalConstraint=&apos;&apos; GOOSECB=&apos;&apos;)"/>
+         <varinfo type="profile" data="IEC61850S2"/>
+         </var>
+         <var name="STRATONLDevice1_XCBR1_BlkOpn_Oper_ctlVal" type="BOOL">
+         <varinfo type="embed" data="&lt;syb&gt;(LogicalDevice=&apos;STRATONLDevice1&apos; LogicalNode=&apos;XCBR1&apos; DataObject=&apos;BlkOpn&apos; DataAttribute=&apos;Oper.ctlVal&apos; ControlObject=FALSE GOOSEreception=FALSE FunctionalConstraint=&apos;CO&apos; GOOSECB=&apos;&apos; GOOSECBLD=&apos;&apos;)"/>
+         <varinfo type="profile" data="IEC61850S2"/>
+         </var>
+         <var name="STRATONLDevice1_XCBR1_BlkOpn_ctlModel" type="SINT">
+         <varinfo type="embed" data="&lt;syb&gt;(LogicalDevice=&apos;STRATONLDevice1&apos; LogicalNode=&apos;XCBR1&apos; DataObject=&apos;BlkOpn&apos; DataAttribute=&apos;ctlModel&apos; ControlObject=FALSE GOOSEreception=FALSE FunctionalConstraint=&apos;CF&apos; GOOSECB=&apos;&apos; GOOSECBLD=&apos;&apos;)"/>
+         <varinfo type="profile" data="IEC61850S2"/>
+         </var>
+         <var name="STRATONLDevice1_XCBR1_BlkCls_Oper_ctlVal" type="BOOL">
+         <varinfo type="embed" data="&lt;syb&gt;(LogicalDevice=&apos;STRATONLDevice1&apos; LogicalNode=&apos;XCBR1&apos; DataObject=&apos;BlkCls&apos; DataAttribute=&apos;Oper.ctlVal&apos; ControlObject=FALSE GOOSEreception=FALSE FunctionalConstraint=&apos;CO&apos; GOOSECB=&apos;&apos; GOOSECBLD=&apos;&apos;)"/>
+         <varinfo type="profile" data="IEC61850S2"/>
+         </var>
+         <var name="STRATONLDevice1_XCBR1_BlkCls_ctlModel" type="SINT">
+         <varinfo type="embed" data="&lt;syb&gt;(LogicalDevice=&apos;STRATONLDevice1&apos; LogicalNode=&apos;XCBR1&apos; DataObject=&apos;BlkCls&apos; DataAttribute=&apos;ctlModel&apos; ControlObject=FALSE GOOSEreception=FALSE FunctionalConstraint=&apos;CF&apos; GOOSECB=&apos;&apos; GOOSECBLD=&apos;&apos;)"/>
+         <varinfo type="profile" data="IEC61850S2"/>
+         </var>
+         <var name="STRATONLDevice1_XCBR1_BlkCls_Control" type="UINT">
+         <varinfo type="embed" data="(LogicalDevice=&apos;STRATONLDevice1&apos; LogicalNode=&apos;XCBR1&apos; DataObject=&apos;BlkCls&apos; DataAttribute=&apos;&apos; ControlObject=TRUE GOOSEreception=FALSE FunctionalConstraint=&apos;&apos; GOOSECB=&apos;&apos;)"/>
+         <varinfo type="profile" data="IEC61850S2"/>
+         </var>
+         <var name="STRATONLDevice1_MMXU1_TotW_mag_f" type="REAL">
+         <varinfo type="embed" data="&lt;syb&gt;(LogicalDevice=&apos;STRATONLDevice1&apos; LogicalNode=&apos;MMXU1&apos; DataObject=&apos;TotW&apos; DataAttribute=&apos;mag.f&apos; ControlObject=FALSE GOOSEreception=FALSE FunctionalConstraint=&apos;MX&apos; GOOSECB=&apos;&apos; GOOSECBLD=&apos;&apos;)"/>
+         <varinfo type="profile" data="IEC61850S2"/>
+         </var>
+         <var name="STRATONLDevice1_TimeQuality_t" type="SINT">
+         <varinfo type="embed" data="&lt;syb&gt;(LogicalDevice=&apos;STRATONLDevice1&apos; LogicalNode=&apos;&apos; DataObject=&apos;&apos; DataAttribute=&apos;TimeQuality&apos; ControlObject=TRUE GOOSEreception=FALSE FunctionalConstraint=&apos;&apos; GOOSECB=&apos;&apos;)"/>
+         <varinfo type="profile" data="IEC61850S2"/>
+         </var>
+         <var name="STRATONLDevice1_MMXU1_TotW_q" type="UDINT">
+         <varinfo type="embed" data="&lt;syb&gt;"/>
+         </var>
+         <var name="STRATONLDevice1_MMXU1_TotW_t" type="LREAL">
+         <varinfo type="embed" data="&lt;syb&gt;"/>
+         </var>
+         <var name="STRATONLDevice1_LLN0_Beh_t" type="LREAL">
+         <varinfo type="embed" data="&lt;syb&gt;(LogicalDevice=&apos;STRATONLDevice1&apos; LogicalNode=&apos;LLN0&apos; DataObject=&apos;Beh&apos; DataAttribute=&apos;t&apos; ControlObject=FALSE GOOSEreception=FALSE FunctionalConstraint=&apos;ST&apos; GOOSECB=&apos;&apos; GOOSECBLD=&apos;&apos;)"/>
+         <varinfo type="profile" data="IEC61850S2"/>
+         </var>
+         <var name="XCBR1_Pos_ON" type="BOOL"/>
+         <var name="XCBR1_Pos_OFF" type="BOOL"/>
+         <var name="XCBR1_Pos_INTERMEDIATE" type="BOOL"/>
+         <var name="XCBR1_Pos_InProgress" type="DINT"/>
+      </vargroup>
+      <vargroup name="(Retain)" kind="RETAIN">
+      </vargroup>
+   </variables>
+</K5project>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<Appli>
+   <Folder Name="IEC61850">
+      <Program Name="DBPOS_Simulation"/>
+      <Program Name="IEC61850_DPC"/>
+      <Program Name="IEC61850_SPC"/>
+      <Program Name="XCBR1_Simu"/>
+   </Folder>
+   <Folder Name="Programs">
+      <Program Name="LLN0"/>
+      <Program Name="MMXU1"/>
+      <Program Name="TimeQuality"/>
+      <Program Name="XCBR1"/>
+   </Folder>
+   <File Name="STRATON.icd"/>
+   <File Name="XCBR1Graphics.gra"/>
+   <FieldBus/>
+   <Profiles/>
+   <GlobalDef/>
+   <Vars/>
+   <Types/>
+</Appli>

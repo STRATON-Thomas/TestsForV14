@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<K5project version="1.1">
+   <programs>
+      <pou name="LLN0" kind="program" period="1" phase="0" lge="FBD">
+         <vargroup name="LLN0" kind="LOCAL">
+            <var name="Beh" type="IEC61850_Beh" init="ON"/>
+            <var name="siMod" type="SINT" init="SINT#1"/>
+         </vargroup>
+<defines name="LLN0"></defines>
+         <sourceFBD sxcell="16" sycell="16">
+            <FBDvarbox id="18" order="0" dx="3" dy="5" sx="8" sy="1" symbol="Beh" style="0"/>
+            <FBDvarbox id="1" order="0" dx="18" dy="5" sx="22" sy="1" symbol="STRATONLDevice1_LLN0_Beh_stVal" style="0"/>
+            <FBDvarbox id="129" order="0" dx="3" dy="7" sx="8" sy="1" symbol="siMod" style="0"/>
+            <FBDvarbox id="128" order="0" dx="18" dy="7" sx="22" sy="1" symbol="STRATONLDevice1_LLN0_Mod_stVal" style="0"/>
+            <FBDcomment id="131" order="0" dx="14" dy="10" sx="15" sy="5" style="3">Beh values
+1 - ON
+2 - Blocked
+3 - Test
+4 - Test/Blocked
+5 - Off            </FBDcomment>
+            <FBDline negate="0" idfrom="18" idto="1" pinfrom="0" pinto="0" cutx="50" cuty="50">
+               <FBDlinepoint xcell="11" ycell="5" xincell="0" yincell="8"/>
+               <FBDlinepoint xcell="14" ycell="5" xincell="3" yincell="8"/>
+               <FBDlinepoint xcell="14" ycell="5" xincell="3" yincell="8"/>
+               <FBDlinepoint xcell="18" ycell="5" xincell="1" yincell="8"/>
+            </FBDline>
+            <FBDline negate="0" idfrom="129" idto="128" pinfrom="0" pinto="0" cutx="50" cuty="50">
+               <FBDlinepoint xcell="11" ycell="7" xincell="0" yincell="8"/>
+               <FBDlinepoint xcell="14" ycell="7" xincell="4" yincell="8"/>
+               <FBDlinepoint xcell="14" ycell="7" xincell="4" yincell="8"/>
+               <FBDlinepoint xcell="18" ycell="7" xincell="1" yincell="8"/>
+            </FBDline>
+         </sourceFBD>
+      </pou>
+   </programs>
+</K5project>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<K5project version="1.1">
+   <programs>
+      <pou name="IEC61850_DPC" kind="UDFB" lge="ST">
+         <vargroup name="IEC61850_DPC" kind="LOCAL">
+            <var name="Control" type="INT" attr="INOUT"/>
+            <var name="ControlModel" type="SINT" attr="IN"/>
+            <var name="Oper_ctlVal" type="BOOL" attr="IN"/>
+            <var name="Select_ctlVal" type="BOOL" attr="IN"/>
+            <var name="stVal" type="UDINT" attr="IN"/>
+            <var name="ctlVal" type="BOOL" attr="OUT"/>
+            <var name="bOperate" type="BOOL" attr="OUT"/>
+            <var name="Busy" type="BOOL"/>
+            <var name="Cancel" type="BOOL"/>
+            <var name="CancelAck" type="BOOL"/>
+            <var name="CancelAddCause" type="INT"/>
+            <var name="DoneAck" type="BOOL"/>
+            <var name="DoneAddCause" type="INT"/>
+            <var name="OperateAck" type="BOOL"/>
+            <var name="OperateAddCause" type="INT"/>
+            <var name="Select" type="BOOL"/>
+            <var name="SelectAck" type="BOOL"/>
+            <var name="SelectAddCause" type="INT"/>
+            <var name="Selected" type="BOOL"/>
+            <var name="_id_FBD_Q82" type="UDINT">
+         <varinfo type="4" data="&lt;EDIT&gt;&lt;SEL&gt;"/>
+         <varinfo type="5" data="FBDFLOW"/>
+            </var>
+            <var name="bPrint" type="BOOL"/>
+            <var name="PreviousValue" type="INT"/>
+            <var name="bDebug" type="BOOL" init="true"/>
+         </vargroup>
+<defines name="IEC61850_DPC">
+#define STATE_UNSELECTED                                0
+
+// select
+#define STATE_WANTS_SELECT                             99
+#define STATE_SELECT_OK                               100
+#define STATE_SELECT_NOT_SUPPORTED                    101
+#define STATE_SELECT_BLOCKED_BY_SWITCHING_HIERARCHY   102
+#define STATE_SELECT_SELECT_FAILED                    103
+#define STATE_SELECT_INVALID_POSITION                 104
+#define STATE_SELECT_POSITION_REACHED                 105
+#define STATE_SELECT_PARAMETER_CHANGE_IN_EXECUTION    106
+#define STATE_SELECT_STEP_LIMIT                       107
+#define STATE_SELECT_BLOCKED_BY_MODE                  108
+#define STATE_SELECT_BLOCKED_BY_PROCESS               109
+#define STATE_SELECT_BLOCKED_BY_INTERLOCKING          110
+#define STATE_SELECT_BLOCKED_BY_SYNCHROCHECK          111
+#define STATE_SELECT_COMMAND_ALREADY_IN_EXECUTION     112
+#define STATE_SELECT_BLOCKED_BY_HEALTH                113
+#define STATE_SELECT_1_OF_N_CONTROL                   114
+#define STATE_SELECT_ABORTION_BY_CANCEL               115
+#define STATE_SELECT_TIME_LIMIT_OVER                  116
+#define STATE_SELECT_ABORTION_BY_TRIP                 117
+#define STATE_SELECT_OBJECT_NOT_SELECTED              118
+
+// operate
+#define STATE_WANTS_OPERATE                           199
+#define STATE_OPERATE_OK                              200
+#define STATE_OPERATE_NOT_SUPPORTED                   201
+#define STATE_OPERATE_BLOCKED_BY_SWITCHING_HIERARCHY  202
+#define STATE_OPERATE_SELECT_FAILED                   203
+#define STATE_OPERATE_INVALID_POSITION                204
+#define STATE_OPERATE_POSITION_REACHED                205
+#define STATE_OPERATE_PARAMETER_CHANGE_IN_EXECUTION   206
+#define STATE_OPERATE_STEP_LIMIT                      207
+#define STATE_OPERATE_BLOCKED_BY_MODE                 208
+#define STATE_OPERATE_BLOCKED_BY_PROCESS              209
+#define STATE_OPERATE_BLOCKED_BY_INTERLOCKING         210
+#define STATE_OPERATE_BLOCKED_BY_SYNCHROCHECK         211
+#define STATE_OPERATE_COMMAND_ALREADY_IN_EXECUTION    212
+#define STATE_OPERATE_BLOCKED_BY_HEALTH               213
+#define STATE_OPERATE_1_OF_N_CONTROL                  214
+#define STATE_OPERATE_ABORTION_BY_CANCEL              215
+#define STATE_OPERATE_TIME_LIMIT_OVER                 216
+#define STATE_OPERATE_ABORTION_BY_TRIP                217
+#define STATE_OPERATE_OBJECT_NOT_SELECTED             218
+
+// cancel
+#define STATE_WANTS_CANCEL                            299
+#define STATE_CANCEL_OK                               300
+#define STATE_CANCEL_NOT_SUPPORTED                    301
+#define STATE_CANCEL_BLOCKED_BY_SWITCHING_HIERARCHY   302
+#define STATE_CANCEL_SELECT_FAILED                    303
+#define STATE_CANCEL_INVALID_POSITION                 304
+#define STATE_CANCEL_POSITION_REACHED                 305
+#define STATE_CANCEL_PARAMETER_CHANGE_IN_EXECUTION    306
+#define STATE_CANCEL_STEP_LIMIT                       307
+#define STATE_CANCEL_BLOCKED_BY_MODE                  308
+#define STATE_CANCEL_BLOCKED_BY_PROCESS               309
+#define STATE_CANCEL_BLOCKED_BY_INTERLOCKING          310
+#define STATE_CANCEL_BLOCKED_BY_SYNCHROCHECK          311
+#define STATE_CANCEL_COMMAND_ALREADY_IN_EXECUTION     312
+#define STATE_CANCEL_BLOCKED_BY_HEALTH                313
+#define STATE_CANCEL_1_OF_N_CONTROL                   314
+#define STATE_CANCEL_ABORTION_BY_CANCEL               315
+#define STATE_CANCEL_TIME_LIMIT_OVER                  316
+#define STATE_CANCEL_ABORTION_BY_TRIP                 317
+#define STATE_CANCEL_OBJECT_NOT_SELECTED              318
+
+// operated
+#define STATE_OPERATED_OK                             400
+#define STATE_OPERATED_NOT_SUPPORTED                  401
+#define STATE_OPERATED_BLOCKED_BY_SWITCHING_HIERARCHY  402
+#define STATE_OPERATED_SELECT_FAILED                  403
+#define STATE_OPERATED_INVALID_POSITION               404
+#define STATE_OPERATED_POSITION_REACHED               405
+#define STATE_OPERATED_PARAMETER_CHANGE_IN_EXECUTION  406
+#define STATE_OPERATED_STEP_LIMIT                     407
+#define STATE_OPERATED_BLOCKED_BY_MODE                408
+#define STATE_OPERATED_BLOCKED_BY_PROCESS             409
+#define STATE_OPERATED_BLOCKED_BY_INTERLOCKING        410
+#define STATE_OPERATED_BLOCKED_BY_SYNCHROCHECK        411
+#define STATE_OPERATED_COMMAND_ALREADY_IN_EXECUTION   412
+#define STATE_OPERATED_BLOCKED_BY_HEALTH              413
+#define STATE_OPERATED_1_OF_N_CONTROL                 414
+#define STATE_OPERATED_ABORTION_BY_CANCEL             415
+#define STATE_OPERATED_TIME_LIMIT_OVER                416
+#define STATE_OPERATED_ABORTION_BY_TRIP               417
+#define STATE_OPERATED_OBJECT_NOT_SELECTED            418
+
+</defines>
+         <sourceSTIL>(*
+INPUTS :
+    ControModel : 0 for no control, 1 direct, 2 select before operate, 3 direct with enhanced security, 4 select before operate with enhanced security
+    Oper_ctlVal : The control value set by the client when client request operate
+    Select_ctlVal : The control value set by the client when client request selection
+    stVal : Current status value
+
+OUTPUTS :
+    ctlVal : The control value set by the client, updated only when operate done and validated (200)
+    bOperate : Rising edge when an operate has been received 
+
+INOUT : 
+    Control : The variable shared between the Straton Logic and the 61850 stack to indicate current state in the operation
+*)
+
+
+bPrint := false;
+if Control &lt;&gt; PreviousValue then
+    bPrint := bDebug;
+    PreviousValue := Control;
+end_if;
+ 
+
+(*  full state machine, works for all ctlModel dpc command *)
+CASE any_to_dint(Control) OF
+  //Select
+     STATE_WANTS_SELECT: //99 - wants select
+        if bPrint then printf(&apos;IEC61850:%ld Wants select&apos;,any_to_dint(Control)); end_if;
+        Select := true;  
+        
+        if SelectAck = true then
+            Select := false;  
+        
+            //100 select_ok; 103 select_failed
+            if (SelectAddCause &lt; 100) then
+                Control := 100 + SelectAddCause;
+            else
+                Control := SelectAddCause;
+            end_if;
+            
+            printf(&apos;IEC61850:%ld Select&apos;,any_to_dint(Control));
+        end_if;
+            
+  // Operate
+    STATE_WANTS_OPERATE : //199 - wants Operate
+        if bPrint then printf(&apos;IEC61850:%ld Wants bOperate&apos;,any_to_dint(Control)); end_if;
+        ctlVal := Oper_ctlVal;
+        bOperate := true;
+        
+        if OperateAck = true then
+            bOperate := false;
+            if OperateAddCause &lt; 200 then
+                Control := 200 + OperateAddCause; //200 operate_ok
+            else
+                Control := OperateAddCause;
+            end_if;
+            printf(&apos;IEC61850:%ld Operate&apos;,any_to_dint(Control));
+        end_if;
+
+        (* end of send command to Hardware *)
+        Selected := false;  
+  
+  //Operated with enhanced security
+    STATE_OPERATE_OK : // opereted - ctrModel= 3 or 4, answer from Hardware
+        if (ControlModel = 3) or (ControlModel = 4) then
+            Busy := True;
+        
+            if DoneAck = true then
+                 Busy := false;
+                 //400 operated_ok, server sends Terminate+
+                 //4xx - server sends Terminate resp-
+                if DoneAddCause &lt; 400 then
+                    Control := 400 + DoneAddCause;
+                else
+                    Control := DoneAddCause;
+                end_if;
+                
+                printf(&apos;IEC61850:%ld Done&apos;,any_to_dint(Control));
+            end_if;
+        end_if;    
+        
+  //Cancel (of Select or of Operete in enhanced security)
+    299 : //299 - wants cancel
+        Cancel := true;
+        
+        if CancelAck then
+            Cancel := false;
+            Selected := false;
+            if CancelAddCause &lt; 300 then
+                Control := 300 + CancelAddCause;
+            else
+                Control := CancelAddCause;
+            end_if;
+            
+            printf(&apos;IEC61850:%ld Cancel&apos;,any_to_dint(Control));
+        end_if;
+     
+END_CASE;
+
+// Received select command
+if Select then
+    SelectAck := True;
+else
+    SelectAck := False;
+end_if;
+
+
+DoneAddCause := 0;
+DoneAck := ( SEL (ctlVal, DBPOS_OFF, DBPOS_ON ) = stVal );
+
+CancelAck := Cancel;
+CancelAddCause := 0;
+
+// Received operate command
+if bOperate then
+    bOperate := false;
+    if ctlVal then
+        // Close
+        if stVal = DBPOS_ON then
+            OperateAddCause := STATE_OPERATE_POSITION_REACHED;
+        elsif stVal = DBPOS_OFF then
+            OperateAddCause := STATE_OPERATE_OK;
+            bOperate := true;
+        elsif stVal = DBPOS_INTERMEDIATE then
+            OperateAddCause := STATE_OPERATE_COMMAND_ALREADY_IN_EXECUTION;
+        else
+            OperateAddCause := STATE_OPERATE_INVALID_POSITION;
+        end_if;
+    else
+        // Open
+        if stVal = DBPOS_OFF then
+            OperateAddCause := STATE_OPERATE_POSITION_REACHED;
+        elsif stVal = DBPOS_ON then
+            OperateAddCause := STATE_OPERATE_OK;
+            bOperate := true;
+        elsif stVal = DBPOS_INTERMEDIATE then
+            OperateAddCause := STATE_OPERATE_COMMAND_ALREADY_IN_EXECUTION;
+        else
+            OperateAddCause := STATE_OPERATE_INVALID_POSITION;
+        end_if;
+    end_if;
+    OperateAck := True;
+else
+    OperateAck := False;
+end_if;
+
+
+         </sourceSTIL>
+      </pou>
+   </programs>
+</K5project>

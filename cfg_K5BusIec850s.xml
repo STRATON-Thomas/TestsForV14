@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<K5project version="1.1">
+   <networks>
+   </networks>
+   <fieldbus>
+   <K5BusIec850s K5ID="1" NICID="" LOCALGOOSESCL="" MAXCONN="0" IDS_GOENA_START="1" PORT="102" FILEDIR="" MAXBRCB="1000" NEXTID="2" DLLVERSION="0">
+   </K5BusIec850s>
+   </fieldbus>
+</K5project>
